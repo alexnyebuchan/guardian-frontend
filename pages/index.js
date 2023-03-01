@@ -1,3 +1,4 @@
+import Header from '@/components/Header';
 import Head from 'next/head';
 
 import { useEffect, useState } from 'react';
@@ -16,11 +17,14 @@ export default function Home() {
 
       const sortedJson = json.response.results;
       setArticles(sortedJson);
+      console.log(articles);
     }
     fetchData();
   }, []);
 
   return (
-    <>{articles ? <p>{articles[0].fields.headline}</p> : <p>Loading...</p>}</>
+    <>
+      <Header />
+    </>
   );
 }

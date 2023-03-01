@@ -1,0 +1,19 @@
+@import './colors.module';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background: $guardian-yellow;
+  color: $guardian-black;
+}
+
+body {
+  color: $guardian-black;
+  background-color: $guardian-white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: 1.6875rem;
+}
