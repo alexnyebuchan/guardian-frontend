@@ -1,0 +1,29 @@
+@import './colors.module';
+
+.searchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: $guardian-white;
+  background-color: $guardian-navy;
+  height: 50px;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+  text {
+    font-size: larger;
+    margin-right: 8px;
+  }
+  input {
+    padding: 8px;
+    color: $guardian-yellow;
+    font-size: larger;
+    border: 1px solid $guardian-yellow;
+    border-radius: 5px;
+    height: 30px;
+    background: $guardian-blue;
+  }
+}
