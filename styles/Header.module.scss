@@ -10,6 +10,7 @@
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   line-height: 32px;
   h2 {
     color: $guardian-yellow;
@@ -34,5 +35,23 @@
       margin-left: 8px;
       width: 25px;
     }
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    h2,
+    div {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    flex-direction: column-reverse;
+  }
+  .headerContainer {
+    height: 220px;
   }
 }

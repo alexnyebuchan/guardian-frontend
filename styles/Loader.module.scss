@@ -1,0 +1,10 @@
+@import './colors.module';
+
+.articlesContainer {
+  padding: 16px;
+  margin: 0 40px;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid $guardian-dark-grey;
+  height: auto;
+}

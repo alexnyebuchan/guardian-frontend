@@ -1,0 +1,32 @@
+@import './colors.module';
+
+.subContainer {
+  background-color: $guardian-light-grey;
+  margin: 4px;
+  border-top: 3px solid $guardian-red;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: $guardian-black;
+  border-right: 1px solid $guardian-dark-grey;
+  img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .subContainer {
+    flex-direction: row;
+    height: 100px;
+    font-size: 12px;
+    line-height: 19px;
+    div {
+      flex-basis: 70%;
+      padding: 3px;
+    }
+    img {
+      flex-basis: 30%;
+      max-width: 130px;
+    }
+  }
+}

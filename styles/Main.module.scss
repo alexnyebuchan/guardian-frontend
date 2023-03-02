@@ -1,13 +1,21 @@
 @import './colors.module';
 
+.main {
+  width: 100%;
+}
+
 .searchContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
   color: $guardian-white;
+  // margin: 0 40px;
+  // border-right: 2px red solid;
   background-color: $guardian-navy;
   height: 50px;
+  // margin: 0 20px;
+  // border: 3px solid red;
 }
 
 .search {
@@ -21,7 +29,7 @@
     padding: 8px;
     color: $guardian-yellow;
     font-size: larger;
-    border: 1px solid $guardian-yellow;
+    border: 1px solid $guardian-white;
     border-radius: 5px;
     height: 30px;
     background: $guardian-blue;

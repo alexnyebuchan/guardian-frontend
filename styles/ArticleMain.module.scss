@@ -1,0 +1,37 @@
+@import './colors.module';
+
+.articleOne {
+  background-color: $guardian-light-grey;
+  margin: 4px;
+  border-top: 3px solid $guardian-red;
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  color: $guardian-black;
+  border-right: 1px solid $guardian-dark-grey;
+  img {
+    width: 100%;
+  }
+  text {
+    flex: 1 1;
+    padding: 10px;
+  }
+  div {
+    flex: 2 1;
+  }
+}
+
+@media (max-width: 1300px) {
+  .articleOne {
+    p {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .articleOne {
+    flex-direction: column-reverse;
+    font-size: medium;
+  }
+}

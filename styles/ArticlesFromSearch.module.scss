@@ -1,0 +1,45 @@
+@import './colors.module';
+
+.articlesContainer {
+  padding: 16px;
+  margin: 0 40px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $guardian-dark-grey;
+  h2 {
+    margin-right: 25px;
+    margin-bottom: 22px;
+  }
+  a {
+    &:hover {
+      opacity: 0.87;
+    }
+  }
+}
+
+.articles {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  h2 {
+    color: $guardian-red;
+  }
+}
+
+@media (max-width: 1150px) {
+  .articles {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 900px) {
+  .articleSecondaryContainer {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 650px) {
+  .articlesContainer {
+    margin: 0;
+  }
+}

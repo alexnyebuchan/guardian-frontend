@@ -1,0 +1,45 @@
+@import './colors.module';
+
+.Container {
+  flex-basis: 45%;
+  display: flex;
+  background-color: $guardian-light-grey;
+  margin: 4px;
+  border-top: 3px solid $guardian-red;
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  color: $guardian-black;
+  border-right: 1px solid $guardian-dark-grey;
+  div {
+    flex-basis: 60%;
+  }
+  img {
+    flex-basis: 40%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 900px) {
+  .Container {
+    flex-direction: row;
+    height: 100px;
+    font-size: 12px;
+    line-height: 19px;
+    div {
+      flex-basis: 70%;
+      padding: 3px;
+    }
+    img {
+      flex-basis: 30%;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .Container {
+    img {
+      max-width: 40%;
+    }
+  }
+}

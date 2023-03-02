@@ -24,7 +24,11 @@ function Main() {
       </div>
 
       {/* Articles */}
-      {searchValue ? <ArticlesFromSearch /> : <ArticlesDefault />}
+      {searchValue ? (
+        <ArticlesFromSearch searchValue={searchValue} />
+      ) : (
+        <ArticlesDefault />
+      )}
     </div>
   );
 }
