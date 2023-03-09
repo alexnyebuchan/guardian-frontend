@@ -18,7 +18,7 @@ function Main() {
       {/* Search Bar */}
       <div className={styles.searchContainer}>
         <span className={styles.search}>
-          <text>Search:</text>
+          <p>Search:</p>
           <input type="text" onChange={setInput} ref={input} />
         </span>
       </div>

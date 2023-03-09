@@ -2,9 +2,11 @@ import styles from '@/styles/ArticleSearch.module.scss';
 import Link from 'next/link';
 
 function ArticleSearch({ article }) {
+  const id = article.id.split('/').slice(-1)[0];
+
   return (
     <>
-      <Link href={article.webUrl} className={styles.Container}>
+      <Link href={`/${id}`} className={styles.Container}>
         <img src={article.fields.thumbnail} />
         <div>
           <h2>{article.tags[0].webTitle}</h2>

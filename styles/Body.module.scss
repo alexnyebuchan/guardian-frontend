@@ -1,0 +1,39 @@
+@import './colors.module';
+
+.articleContainer {
+  max-width: 90%;
+  padding: 16px;
+  margin: 0 40px;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid $guardian-dark-grey;
+  height: auto;
+  span {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: $guardian-red;
+  }
+  h2 {
+    margin-right: 25px;
+  }
+  a {
+    &:hover {
+      opacity: 0.87;
+    }
+  }
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+
+  img {
+    max-width: 600px;
+    width: 100%;
+  }
+}
+
+.imageLabel {
+  display: inline-block;
+}

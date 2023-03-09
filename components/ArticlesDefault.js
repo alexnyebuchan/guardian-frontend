@@ -9,12 +9,10 @@ import Loader from './Loader';
 function ArticlesDefault() {
   const [articles, setArticles] = useState();
 
-  const api_key = 'ab58c47a-b9d3-4df4-874a-78cd2d7f5a88';
-
   useEffect(() => {
     async function fetchData() {
       const res = await fetch(
-        `https://content.guardianapis.com/search?section=technology&page-size=12&order-date=published&show-fields=headline,trailText,thumbnail&show-tags=keyword&api-key=${api_key}`
+        `https://content.guardianapis.com/search?section=technology&page-size=12&order-date=published&show-fields=headline,trailText,thumbnail&show-tags=keyword&api-key=${process.env.NEXT_PUBLIC_APIKEY}`
       );
       const json = await res.json();
 
