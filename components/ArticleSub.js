@@ -5,7 +5,7 @@ function ArticleSub({ article }) {
   const id = article.id.split('/').slice(-1)[0];
 
   return (
-    <Link href={`/${id}`} className={styles.subContainer}>
+    <Link href={`/article/${id}`} className={styles.subContainer}>
       <img src={article.fields.thumbnail} />
       <div>
         <h2>{article.tags[0].webTitle}</h2>

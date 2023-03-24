@@ -10,26 +10,27 @@
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
   color: $guardian-white;
-  // margin: 0 40px;
-  // border-right: 2px red solid;
+  font-size: larger;
+
   background-color: $guardian-navy;
   height: 50px;
-  // margin: 0 20px;
-  // border: 3px solid red;
 }
 
 .search {
   display: flex;
   flex-direction: row;
-  text {
-    font-size: larger;
-    margin-right: 8px;
+  align-items: center;
+  img {
+    margin-right: 4px;
+    height: 15px;
   }
   input {
     padding: 8px;
+    margin-left: 5px;
     color: $guardian-yellow;
     font-size: larger;
-    border: 1px solid $guardian-white;
+
+    border: 1px solid $guardian-dark-grey;
     border-radius: 5px;
     height: 30px;
     background: $guardian-blue;

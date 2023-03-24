@@ -1,12 +1,17 @@
 import { useState, useRef } from 'react';
 
+import Image from 'next/image';
+
 import ArticlesDefault from '@/components/ArticlesDefault';
 import ArticlesFromSearch from '@/components/ArticlesFromSearch';
 
 import styles from '@/styles/Main.module.scss';
 
+import searchIcon from '../public/images/search.svg';
+
 function Main() {
   const input = useRef();
+
   const [searchValue, setSearchValue] = useState('');
 
   function setInput() {
@@ -18,7 +23,10 @@ function Main() {
       {/* Search Bar */}
       <div className={styles.searchContainer}>
         <span className={styles.search}>
-          <p>Search:</p>
+          <p>
+            <Image src={searchIcon} />
+            Search For Articles
+          </p>
           <input type="text" onChange={setInput} ref={input} />
         </span>
       </div>

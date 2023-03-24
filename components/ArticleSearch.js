@@ -6,7 +6,7 @@ function ArticleSearch({ article }) {
 
   return (
     <>
-      <Link href={`/${id}`} className={styles.Container}>
+      <Link href={`/article/${id}`} className={styles.Container}>
         <img src={article.fields.thumbnail} />
         <div>
           <h2>{article.tags[0].webTitle}</h2>

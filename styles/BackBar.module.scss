@@ -1,0 +1,21 @@
+@import './colors.module';
+
+.searchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+
+  background-color: $guardian-navy;
+  height: 50px;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+  p {
+    font-size: larger;
+    color: $guardian-white;
+    text-decoration: inherit;
+  }
+}

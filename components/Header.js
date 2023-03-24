@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import styles from '@/styles/Header.module.scss';
 
@@ -17,7 +18,9 @@ function Header() {
           </a>
         </span>
         <span className={styles.logoContainer}>
-          <Image alt="/" src={GuardianLogo} />
+          <Link href="/">
+            <Image alt="/" src={GuardianLogo} />
+          </Link>
         </span>
       </div>
     </div>

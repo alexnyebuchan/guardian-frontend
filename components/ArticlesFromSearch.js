@@ -3,12 +3,15 @@ import { useState, useEffect } from 'react';
 import styles from '@/styles/ArticlesFromSearch.module.scss';
 import Loader from './Loader';
 import ArticleSearch from './ArticleSearch';
+import debounce from 'lodash/debounce';
 
 function ArticlesFromSearch({ searchValue }) {
   const [articles, setArticles] = useState();
 
+  const fetchDataDebounced = debounce(fetchData, 500);
+
   useEffect(() => {
-    fetchData();
+    fetchDataDebounced();
   }, [searchValue]);
 
   async function fetchData() {

@@ -1,39 +1,106 @@
 @import './colors.module';
 
 .articleContainer {
-  max-width: 90%;
-  padding: 16px;
-  margin: 0 40px;
+  max-width: 80%;
+  padding: 0 16px;
+  padding-top: 16px;
+  margin: 0 200px;
   display: flex;
   flex-direction: row;
-  border: 1px solid $guardian-dark-grey;
-  height: auto;
+  border-left: 1px solid $guardian-dark-grey;
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
   span {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     color: $guardian-red;
+    h2 {
+      margin-right: 40px;
+      width: 150px;
+      margin-bottom: 150px;
+    }
+    p {
+      border-top: 1px solid $guardian-dark-grey;
+    }
+  }
+
+  h1 {
+    margin-bottom: 20px;
   }
   h2 {
-    margin-right: 25px;
+    margin-bottom: 20px;
   }
+
   a {
     &:hover {
       opacity: 0.87;
     }
   }
+  p {
+    margin-bottom: 10px;
+  }
+}
+
+.imgTag {
+  font-size: 14px;
+  color: grey;
 }
 
 .article {
   display: flex;
   flex-direction: column;
+  padding-left: 20px;
+  border-left: 1px solid $guardian-dark-grey;
 
   img {
     max-width: 600px;
-    width: 100%;
+    margin-right: 5px;
+  }
+
+  a {
+    color: $guardian-blue;
+    text-decoration: underline;
   }
 }
 
 .imageLabel {
   display: inline-block;
+}
+
+@media (max-width: 1150px) {
+  .articleContainer {
+    flex-direction: column;
+    margin: 0;
+    span {
+      h2 {
+        margin-bottom: 5px;
+      }
+      p {
+        border-bottom: 1px solid $guardian-dark-grey;
+        border-top: 0;
+      }
+    }
+  }
+}
+
+.comments {
+  max-width: 20%;
+}
+
+@media (max-width: 900px) {
+  .article {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .articleSecondaryContainer {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 650px) {
+  .articleContainer {
+    margin: 0;
+  }
 }

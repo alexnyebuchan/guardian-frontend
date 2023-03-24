@@ -6,7 +6,7 @@ function ArticleMain({ article }) {
   const id = article.id.split('/').slice(-1)[0];
 
   return (
-    <Link className={styles.articleOne} href={`/${id}`}>
+    <Link className={styles.articleOne} href={`/article/${id}`}>
       <text>
         <h2>{article.tags[0].webTitle}</h2>
         <h3>{article.fields.headline}</h3>
