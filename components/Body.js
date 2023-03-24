@@ -6,10 +6,15 @@ import camera from '../public/images/camera.svg';
 import Comments from './Comments';
 
 function Body({ article }) {
+  console.log(article);
+
   const bodyParsed = parse(article.fields.body);
   const bdyArr = bodyParsed.childNodes.filter(
     (bdy) => bdy.constructor.name === 'HTMLElement'
   );
+
+  console.log(bodyParsed);
+  console.log(bdyArr);
 
   return (
     <div className={styles.articleContainer}>
