@@ -11,8 +11,6 @@ function Body({ article }) {
     (bdy) => bdy.constructor.name === 'HTMLElement'
   );
 
-  console.log(article);
-
   return (
     <div className={styles.articleContainer}>
       <span>
@@ -51,7 +49,7 @@ function Body({ article }) {
         </div>
       </div>
       <span className={styles.comments}>
-        <Comments />
+        <Comments id={article.id} />
       </span>
     </div>
   );

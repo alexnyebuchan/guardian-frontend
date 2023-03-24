@@ -25,7 +25,10 @@ function ArticlesDefault() {
     <>
       {articles ? (
         <div className={styles.articlesContainer}>
-          <h2>Technology</h2>
+          <span>
+            <h2>Technology</h2>
+            <p>Latest Articles</p>
+          </span>
           <div className={styles.articles}>
             <div className={styles.articleMainContainer}>
               <ArticleMain article={articles[0]} />
@@ -39,10 +42,10 @@ function ArticlesDefault() {
                 </span>
               ))}
             </div>
-            <div className={styles.articleSubContainer}>
+            {/* <div className={styles.articleSubContainer}>
               <button>+ More Technology</button>
               <span>Article 7,8,9,10,11,12</span>
-            </div>
+            </div> */}
           </div>
         </div>
       ) : (
