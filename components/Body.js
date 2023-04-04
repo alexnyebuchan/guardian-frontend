@@ -7,11 +7,8 @@ import Comments from './Comments';
 
 function Body({ article }) {
   const root = parse(article.fields.body);
-  console.log(article.fields.body);
-  console.log(root);
-  const bdyArr = root.childNodes.filter(
-    (bdy) => bdy.constructor.name === 'HTMLElement'
-  );
+  console.log(root.childNodes);
+  const bdyArr = root.childNodes.filter((bdy) => bdy.nodeType === 1);
 
   return (
     <div className={styles.articleContainer}>
