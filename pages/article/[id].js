@@ -4,6 +4,8 @@ import Head from 'next/head';
 import BackBar from '@/components/BackBar';
 
 function ArticlePage({ article }) {
+  console.log(article);
+
   return (
     <>
       <Head>
