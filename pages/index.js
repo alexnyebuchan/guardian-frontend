@@ -7,6 +7,7 @@ export default function Home() {
     <>
       <Head>
         <title>Guardian Technology</title>
+        <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <Header />
       <Main />
