@@ -6,8 +6,10 @@ import camera from '../public/images/camera.svg';
 import Comments from './Comments';
 
 function Body({ article }) {
-  const bodyParsed = parse(article.fields.body);
-  const bdyArr = bodyParsed.childNodes.filter(
+  const root = parse(article.fields.body);
+  console.log(article.fields.body);
+  console.log(root);
+  const bdyArr = root.childNodes.filter(
     (bdy) => bdy.constructor.name === 'HTMLElement'
   );
 
