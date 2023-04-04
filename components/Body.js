@@ -10,7 +10,7 @@ function Body({ article }) {
 
   const bodyParsed = parse(article.fields.body);
   const bdyArr = bodyParsed.childNodes.filter(
-    (bdy) => bdy.constructor.name === 'HTMLElement'
+    (bdy) => (bdy.constructor.name === 'HTMLElement') | 'r'
   );
 
   console.log(bodyParsed);
