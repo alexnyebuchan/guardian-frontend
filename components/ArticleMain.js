@@ -7,11 +7,11 @@ function ArticleMain({ article }) {
 
   return (
     <Link className={styles.articleOne} href={`/article/${id}`}>
-      <text>
+      <section>
         <h2>{article.tags[0].webTitle}</h2>
         <h3>{article.fields.headline}</h3>
         <p>{article.fields.trailText}</p>
-      </text>
+      </section>
       <div>
         <img src={article.fields.thumbnail} />
       </div>

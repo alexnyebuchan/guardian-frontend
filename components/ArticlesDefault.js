@@ -37,7 +37,7 @@ function ArticlesDefault() {
             </div>
             <div className={styles.articleSecondaryContainer}>
               {articles.slice(2, -6).map((article) => (
-                <span>
+                <span key={article.fields.headline}>
                   <ArticleSub article={article} />
                 </span>
               ))}

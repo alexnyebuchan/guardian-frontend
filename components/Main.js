@@ -24,7 +24,7 @@ function Main() {
       <div className={styles.searchContainer}>
         <span className={styles.search}>
           <p>
-            <Image src={searchIcon} />
+            <Image alt="/" src={searchIcon} />
             Search For Articles
           </p>
           <input type="text" onChange={setInput} ref={input} />

@@ -7,7 +7,6 @@ import Comments from './Comments';
 
 function Body({ article }) {
   const root = parse(article.fields.body);
-  console.log(root.childNodes);
   const bdyArr = root.childNodes.filter((bdy) => bdy.nodeType === 1);
 
   return (
@@ -24,13 +23,13 @@ function Body({ article }) {
           <img src={article.fields.thumbnail} alt="" />
           <div className={styles.imageLabel}>
             <Image src={camera} alt="/" />
-            <text className={styles.imgTag}>
+            <section className={styles.imgTag}>
               {
                 article.fields.main
                   .split('image__caption">')[1]
                   .split('</span>')[0]
               }
-            </text>
+            </section>
           </div>
           <div className={styles.body}>
             {bdyArr[0].childNodes[0]._rawText === ' \n ' ? (
@@ -42,7 +41,7 @@ function Body({ article }) {
                 </p>
               </>
             ) : (
-              bdyArr.map((b) => <p>{b.childNodes[0]._rawText}</p>)
+              bdyArr.map((b) => <p key={b}>{b.childNodes[0]._rawText}</p>)
             )}
           </div>
         </div>

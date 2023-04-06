@@ -27,7 +27,6 @@ function Comments({ id }) {
     }
   };
 
-  console.log(id);
   return (
     <div className={styles.commentSection}>
       <h3>Leave a Comment below</h3>
